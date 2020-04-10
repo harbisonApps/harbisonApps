@@ -4,8 +4,8 @@
             <div class="text-h6 heading">
                 Free Consultation
             </div>
-        </q-card-section>
-        <q-card-section>
+        <!-- </q-card-section>
+        <q-card-section> -->
             <div class="row ">
                 <q-input dense
                     :rules="[
@@ -15,13 +15,13 @@
                     filled
                     v-model="name"
                     label="Name"
-                    class="col q-mt-sm"
+                    class="col"
                     ref="name"/>
             </div>
             <div class="row ">
                 <q-input dense
                     lazy-rules ref="email"
-                    :rules="[ val => isVaildEmail(val) || 'Please enter a vaild email']"
+                    :rules="[ val => isValidEmail(val) || 'Please enter a valid email']"
                     filled
                     v-model="email"
                     label="Email"
@@ -38,6 +38,25 @@
                     label="Phone"
                     class="col q-mt-sm"
                     ref="phone"/>
+            </div>
+            <div class="row">
+                <p>I'm interested in:</p>
+                <q-option-group
+                    name="request"
+                    v-model="request"
+                    :options="options"
+                    type="checkbox"
+                    color="secondary"
+                    inline
+                    />
+            </div>
+            <div class="row ">
+                <q-input dense rows="4"
+                    :rules="[val => !!val || '* Required',]"
+                    filled type="textarea"
+                    v-model="message"
+                    label="Message"
+                    class="col q-mt-sm"/>
             </div>
         </q-card-section>
         <q-card-actions align="right">
@@ -61,13 +80,29 @@ export default {
         return {
             name: '',
             email: '',
-            phone:''
+            phone:'',
+            message: '',
+            request:[],
+            options: [
+                {
+                    label: 'SPA',
+                    value: 'spa'
+                },
+                {
+                    label: 'Static Site',
+                    value: 'static_site'
+                },
+                {
+                    label: 'Java Script',
+                    value: 'javaScript'
+                }
+            ],
         }
     },
 
     methods: {
         
-        isVaildEmail(email){
+        isValidEmail(email){
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(String(email).toLowerCase());
         },
@@ -106,7 +141,7 @@ export default {
 <style scoped>
     .form-card {
         min-width: 300px;
-        max-width: 450px;
+        width: 400px;
 	}
 	.form-card .heading {
 		text-transform: capitalize;
@@ -126,5 +161,4 @@ export default {
 	.form-card .q-img__image {
 		background-size: cover !important;
 	}
-	
 </style>

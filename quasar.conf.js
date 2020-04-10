@@ -68,7 +68,8 @@ module.exports = function (ctx) {
         "QSeparator",
         "QCarousel",
         "QCarouselControl",
-        "QCarouselSlide"
+        "QCarouselSlide",
+        'QOptionGroup'
       ],
 
       directives: ["Ripple", "ClosePopup"],
