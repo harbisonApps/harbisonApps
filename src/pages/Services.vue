@@ -4,11 +4,8 @@
             <h1>Services</h1>
         </div>
         <div>
-            <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Eaque quod eligendi dolore aspernatur aperiam corporis recusandae. 
-            Quam repellendus, ab natus dolorem culpa quidem quas eius, nihil molestiae 
-            deserunt eveniet error!
+            <p class="lead">From dynamic web apps and static sites, to adding features to your website; I will give
+                you what you need to improve your web presence.
             </p>
         </div>
         <div>
@@ -63,6 +60,10 @@
                                             <li>Versatile</li>
                                             <li>Reusability</li>
                                         </ul>
+                                        <q-img class="q-ml-md"
+                                            spinner-color="white"
+                                            src="../statics/Astro_Vuejs.png"
+                                            style="height: 200px; width: 200px" />
                                     </div>
                                 </div>
                             </q-carousel-slide>
@@ -138,21 +139,20 @@
                 </q-tab-panel>
                 <q-tab-panel name="static_sites">
                     <div>
-                        <h2>static sites</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus amet sint 
-                            commodi ex, aliquam ab quas doloremque. Porro nostrum vel nesciunt voluptatum 
-                            minus, nisi nobis iure quae, harum sint optio?
+                        <h2>Static Sites</h2>
+                        <p>A static website contains Web pages with fixed content. Each page is coded in 
+                            HTML and displays the same information to every visitor. Static sites are the 
+                            most basic type of website and are the easiest to create. Unlike dynamic websites, 
+                            they do not require a programming language or database.
                         </p>
+                        <p>Next paragraph</p>
                     </div>
                 </q-tab-panel>
                 <q-tab-panel name="javascript">
                     <div>
-                        <h2>javascript</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus amet sint 
-                            commodi ex, aliquam ab quas doloremque. Porro nostrum vel nesciunt voluptatum 
-                            minus, nisi nobis iure quae, harum sint optio?
+                        <h2>Javascript</h2>
+                        <p class="lead">Are you looking to add a new feature to your existing web site? Chances are 
+                            that it's javascript is involved.
                         </p>
                     </div>
                 </q-tab-panel>

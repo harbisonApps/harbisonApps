@@ -6,7 +6,7 @@
             <FreeConsult />
             </q-dialog>
         </div>
-        <div>
+        <div class="row justify-center q-mt-md">
             <p>I am always up for a new challenge. So hit me up and lets set up your free consultation today.
             </p>
         </div>

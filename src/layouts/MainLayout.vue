@@ -70,7 +70,7 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      appVersion: '0.5.0',
+      appVersion: '0.5.5',
       navs: [
         { to: "/", icon: "home", label: "Home" },
         { to: "/about", icon: "info", label: "About" },

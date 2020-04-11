@@ -19,27 +19,22 @@
         of flavors.
       </p>
       <h3 class="row justify-center">"Flavors, what flavors?"</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, obcaecati! Reiciendis 
-        nulla ipsa vel quam aut, fuga culpa dolores expedita molestiae reprehenderit omnis! Iste, 
-        repellat velit quaerat reiciendis voluptatibus corrupti.
+      <p>One the benefits of using Vue.js is that there are a variety of ways to build web sites and apps.
       </p>
       <div class="row justify-center">
         <ul class="text-subtitle1">
           <li>Development Speed</li>
           <li>Smaller JavaScript Payload</li>
-          <li>Versitile</li>
-          <li>Reuseability</li>
+          <li>Versatile</li>
+          <li>Reusability</li>
         </ul>
       </div>
       <div class="text-center">
-        <FreeButton   @click="showFreeConsult = true"/>
-        <br>
-        <q-btn color="primary" to="/services">
+        <q-btn class="full-width" color="secondary" to="/services">
           Services
-          <q-tooltip content-class="tooltip" content-style="font-size: 16px" :offset="[10, 10]">
-            Servives I provide
-          </q-tooltip>
         </q-btn>
+        <br><br>
+        <FreeButton   @click="showFreeConsult = true"/>
         <q-dialog v-model="showFreeConsult">
           <FreeConsult />
         </q-dialog>
