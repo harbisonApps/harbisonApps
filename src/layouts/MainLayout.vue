@@ -49,6 +49,11 @@
             <q-item-label>{{ nav.label }}</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item>
+          <q-item-section>
+            <a href='https://ko-fi.com/E1E01LQUA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi4.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
