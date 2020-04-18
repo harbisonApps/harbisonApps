@@ -9,8 +9,8 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    
-    "build": "quasar build -m ssr",
+    "build": "quasar build",
+    "build:ssr": "quasar build -m ssr",
     "build:pwa": "quasar build -m pwa",
     "start": "node server.js",
     "lint": "eslint --ext .js,.vue src",
