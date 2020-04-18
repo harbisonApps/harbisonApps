@@ -1,6 +1,9 @@
 <template >
     <q-card class="form-card">
-        <q-card-section>
+        <q-card-section name="consult-contact"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="consult-contact" />
             <div class="text-h6 heading">
                 Free Consultation
             </div>

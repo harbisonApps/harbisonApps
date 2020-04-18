@@ -3,11 +3,13 @@
         <div class="row justify-center q-mb-md">
             <h1>About</h1>
         </div>
-        <div class="content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Eaque quod eligendi dolore aspernatur aperiam corporis recusandae. 
-            Quam repellendus, ab natus dolorem culpa quidem quas eius, nihil molestiae 
-            deserunt eveniet error!
+        <div>
+            <p class="lead">I have built over 70 websites (most are defunct) for over 20 years.
+            </p>
+            <p>From static HTML sites, as well as ones built with CMS platforms; to 
+                dynamic projects build with .NET, Angular, and Vue. Vue, as well as Nuxt and 
+                Quasar are my go to for new or rebuilding websites.</p>
+            
         </div>
         <div class="text-center q-mt-md">
             <FreeButton   @click="showFreeConsult = true"/>
