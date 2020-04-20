@@ -1,8 +1,9 @@
 <template >
-<form name="consult-contact" data-netlify="true"
+<q-card class="form-card">
+    <form name="consult-contact" data-netlify="true"
     data-netlify-honeypot="bot-field" method="post" 
     @submit.prevent="handleSubmit">
-    <q-card class="form-card">
+    
         <q-card-section>
             <input type="hidden" name="form-name" value="consult-contact" />
             <div class="text-h6 heading">
@@ -75,8 +76,8 @@
                 label="Save"
                 color="green"/>
         </q-card-actions>
-    </q-card>
-</form>
+    </form>
+</q-card>
 </template>
 <script>
 import axios from "axios";
