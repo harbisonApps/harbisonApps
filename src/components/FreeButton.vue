@@ -14,7 +14,7 @@ export default {
 <style scoped>
 .freeConsultBtn{
   min-width: 300px;
-  max-width: 400px;
+  max-width: 350px;
   height: 150px;
 }
 </style>

@@ -1,8 +1,9 @@
 <template >
+<form name="consult-contact" data-netlify="true"
+    data-netlify-honeypot="bot-field" method="post" 
+    @submit.prevent="handleSubmit">
     <q-card class="form-card">
-        <q-card-section name="consult-contact"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field">
+        <q-card-section>
             <input type="hidden" name="form-name" value="consult-contact" />
             <div class="text-h6 heading">
                 Free Consultation
@@ -61,6 +62,7 @@
                     label="Message"
                     class="col q-mt-sm"/>
             </div>
+            <div class="row " data-netlify-recaptcha="true"></div>
         </q-card-section>
         <q-card-actions align="right">
             <q-btn name="cancel"
@@ -74,8 +76,10 @@
                 color="green"/>
         </q-card-actions>
     </q-card>
+</form>
 </template>
 <script>
+import axios from "axios";
 import swal from "sweetalert";
 export default {
     
@@ -83,7 +87,7 @@ export default {
         return {
             name: '',
             email: '',
-            phone:'',
+            phone: '',
             message: '',
             request:[],
             options: [

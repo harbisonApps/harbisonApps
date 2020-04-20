@@ -29,9 +29,10 @@
           <li>Reusability</li>
         </ul>
       </div>
-      <div class="text-center">
-        <q-btn class="full-width" color="secondary" to="/services">
-          Services
+      <div class="row justify-center">
+        <q-btn class="servicesBtn q-px-xl text-h5 q-mx-xs"  
+          color="accent" icon="code"
+          to="/services">Services I Provide 
         </q-btn>
         <br><br>
         <FreeButton   @click="showFreeConsult = true"/>
@@ -58,4 +59,9 @@ export default {
 }
 </script>
 <style scoped>
+.servicesBtn{
+  min-width: 300px;
+  max-width: 350px;
+  height: 150px;
+}
 </style>
