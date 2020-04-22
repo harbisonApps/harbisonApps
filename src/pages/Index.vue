@@ -30,15 +30,15 @@
         </ul>
       </div>
       <div class="row justify-center">
-        <q-btn class="servicesBtn q-px-xl text-h5 q-mx-xs"  
+        <q-btn class="servicesBtn q-mb-sm q-px-xl text-h5 q-mx-xs"  
           color="accent" icon="code"
           to="/services">Services I Provide 
         </q-btn>
         <br><br>
-        <FreeButton   @click="showFreeConsult = true"/>
-        <q-dialog v-model="showFreeConsult">
+        <!-- <FreeButton   @click="showFreeConsult = true"/>
+        <q-dialog v-model="showFreeConsult"> -->
           <FreeConsult />
-        </q-dialog>
+        <!-- </q-dialog> -->
       </div>
     </div>
   </q-page>
@@ -49,11 +49,11 @@ export default {
   name: 'PageIndex',
   components:{
     'FreeConsult' : require('components/FreeConsult').default,
-    'FreeButton' : require('components/FreeButton').default,
+    // 'FreeButton' : require('components/FreeButton').default,
   },
   data() {
     return {
-      showFreeConsult: false
+      // showFreeConsult: false
     }
   },
 }

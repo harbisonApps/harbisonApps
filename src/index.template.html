@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= htmlWebpackPlugin.options.productName %></title>
+    <title>Harbison Apps</title>
 
     <meta charset="utf-8">
     <meta name="description" content="<%= htmlWebpackPlugin.options.productDescription %>">
@@ -16,6 +16,31 @@
     <link rel="icon" type="image/ico" href="statics/icons/favicon.ico">
   </head>
   <body>
+    <form hidden name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <p>
+        <label>Do not fill this in <input type="text" name="bot-field" /></label>
+      </p>
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Your Role: <select name="request[]">
+            <option value="SPA">SPA</option>
+            <option value="Static Site">Static Site</option>
+            <option value="Java Script">Java Script</option>
+          </select></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+
     <!-- DO NOT touch the following DIV -->
     <div id="q-app"></div>
   </body>
