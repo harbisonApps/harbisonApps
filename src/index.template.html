@@ -16,8 +16,8 @@
     <link rel="icon" type="image/ico" href="statics/icons/favicon.ico">
   </head>
   <body>
-    <form hidden name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <p>
+    <form hidden name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+      <p hidden>
         <label>Do not fill this in <input type="text" name="bot-field" /></label>
       </p>
       <p>
@@ -25,6 +25,9 @@
       </p>
       <p>
         <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Phone: <input type="phone" name="phone" /></label>
       </p>
       <p>
         <label>Your Role: <select name="request[]">

@@ -27,6 +27,7 @@
                             filled
                             v-model="form.name"
                             label="Name"
+                            type="text"
                             class="col"
                             ref="name"/>
                     </div>
@@ -37,6 +38,7 @@
                             filled
                             v-model="form.email"
                             label="Email"
+                            type="email"
                             class="col q-mt-sm"/>
                     </div>
                     <div class="row ">
@@ -48,6 +50,7 @@
                             filled
                             v-model="form.phone"
                             label="Phone"
+                            type="phone"
                             class="col q-mt-sm"
                             ref="phone"/>
                     </div>
@@ -147,29 +150,47 @@ export default {
             }
         },
         handleSubmit() {
-            fetch('/',{
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-urlencoded'
-                },
-                body: this.encode({
+            // fetch('',{
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/x-www-form-urlencoded'
+            //     },
+            //     body: this.encode({
+            //         'form-name': 'contact',
+            //         name: this.form.name,
+            //         email: this.form.email,
+            //         phone: this.form.phone,
+            //         request: this.form.request.toString(),
+            //         message: this.form.message
+            //     })
+            // })
+
+            const axiosConfig = {
+                header: { "Content-Type": "application/x-www-form-urlencoded" }
+            };
+
+            axios.post(
+                "/",
+                this.encode({
                     'form-name': 'contact',
                     name: this.form.name,
                     email: this.form.email,
                     phone: this.form.phone,
                     request: this.form.request.toString(),
                     message: this.form.message
-                })
-            })
+                }),
+                axiosConfig
+
+            )
             .then(() =>{
                 
-                swal("Thank you, I will contact you as soon as possible", "", "success"),
+                swal("Thank you", "I will contact you as soon as possible", "success"),
                 this.contactDialog = false,
-                this.clearForm(),
-                console.log("console log", this.$data)
+                this.clearForm()
+                // console.log("console log", this.$body)
             })    
             .catch((err) => {
-                swal("Something went wrong, please try again", "", "error"),
+                swal("","Something went wrong, please try again", "error"),
                 console.error("console log",err)
             })
                 
