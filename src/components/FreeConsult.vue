@@ -150,38 +150,38 @@ export default {
             }
         },
         handleSubmit() {
-            // fetch('',{
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/x-www-form-urlencoded'
-            //     },
-            //     body: this.encode({
-            //         'form-name': 'contact',
-            //         name: this.form.name,
-            //         email: this.form.email,
-            //         phone: this.form.phone,
-            //         request: this.form.request.toString(),
-            //         message: this.form.message
-            //     })
-            // })
-
-            const axiosConfig = {
-                header: { "Content-Type": "application/x-www-form-urlencoded" }
-            };
-
-            axios.post(
-                "/",
-                this.encode({
+            fetch('/',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: this.encode({
                     'form-name': 'contact',
                     name: this.form.name,
                     email: this.form.email,
                     phone: this.form.phone,
                     request: this.form.request.toString(),
                     message: this.form.message
-                }),
-                axiosConfig
+                })
+            })
 
-            )
+            // const axiosConfig = {
+            //     header: { "Content-Type": "application/x-www-form-urlencoded" }
+            // };
+
+            // axios.post(
+            //     "/",
+            //     this.encode({
+            //         'form-name': 'contact',
+            //         name: this.form.name,
+            //         email: this.form.email,
+            //         phone: this.form.phone,
+            //         request: this.form.request.toString(),
+            //         message: this.form.message
+            //     }),
+            //     axiosConfig
+
+            // )
             .then(() =>{
                 
                 swal("Thank you", "I will contact you as soon as possible", "success"),
