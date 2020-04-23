@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    "build": "quasar build",
+    "build": "quasar build && shx cp _redirects dist/spa/_redirects",
     "build:ssr": "quasar build -m ssr",
     "build:pwa": "quasar build -m pwa",
     "start": "node server.js",
@@ -23,6 +23,7 @@
     "minimist": "^1.2.5",
     "mongoose": "^5.9.9",
     "quasar": "^1.9.14",
+    "shx": "^0.3.2",
     "sweetalert": "^2.1.2",
     "vue-i18n": "^8.16.0"
   },
