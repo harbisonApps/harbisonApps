@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    "build": "quasar build && shx cp _redirects dist/spa/_redirects",
+    "build": "quasar build && shx cp src/_redirects dist/spa/_redirects",
     "build:ssr": "quasar build -m ssr",
     "build:pwa": "quasar build -m pwa",
     "start": "node server.js",
