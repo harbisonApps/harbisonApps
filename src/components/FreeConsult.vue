@@ -12,7 +12,7 @@
             @submit.prevent="submitForm">
             
                 <q-card-section>
-                    <input type="hidden" name="bot-field" />
+                    <!-- <input type="hidden" name="bot-field" /> -->
                     <div class="text-h6 heading">
                         Free Consultation
                     </div>
@@ -104,25 +104,25 @@ export default {
         return {
             contactDialog: false,
             form: {
-            name: '',
-            email: '',
-            phone: '',
-            message: '',
-            request:[],
-            options: [
-                {
-                    label: 'SPA',
-                    value: 'SPA'
-                },
-                {
-                    label: 'Static Site',
-                    value: 'Static Site'
-                },
-                {
-                    label: 'Java Script',
-                    value: 'Java Script'
-                }
-            ],
+                name: '',
+                email: '',
+                phone: '',
+                message: '',
+                request:[],
+                options: [
+                    {
+                        label: 'SPA',
+                        value: 'SPA'
+                    },
+                    {
+                        label: 'Static Site',
+                        value: 'Static Site'
+                    },
+                    {
+                        label: 'Java Script',
+                        value: 'Java Script'
+                    }
+                ],
             }
         }
     },
@@ -187,7 +187,7 @@ export default {
                 swal("Thank you", "I will contact you as soon as possible", "success"),
                 this.contactDialog = false,
                 this.clearForm()
-                // console.log("console log", this.$body)
+                console.log("console log", this.body)
             })    
             .catch((err) => {
                 swal("","Something went wrong, please try again", "error"),

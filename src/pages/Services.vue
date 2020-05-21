@@ -160,10 +160,10 @@
             <q-separator/>
         </div>
         <div class="text-center q-mt-md">
-            <FreeButton   @click="showFreeConsult = true"/>
-            <q-dialog v-model="showFreeConsult">
+            <!-- <FreeButton   @click="showFreeConsult = true"/>
+            <q-dialog v-model="showFreeConsult"> -->
                 <FreeConsult />
-            </q-dialog>
+            <!-- </q-dialog> -->
         </div>
     </q-page>
 </template>
@@ -172,7 +172,7 @@ export default {
     name: 'PageServices',
     components:{
     'FreeConsult' : require('components/FreeConsult').default,
-    'FreeButton' : require('components/FreeButton').default,
+    // 'FreeButton' : require('components/FreeButton').default,
     },
     data() {
         return {

@@ -12,10 +12,10 @@
             
         </div>
         <div class="text-center q-mt-md">
-            <FreeButton   @click="showFreeConsult = true"/>
-            <q-dialog v-model="showFreeConsult">
+            <!-- <FreeButton   @click="showFreeConsult = true"/>
+            <q-dialog v-model="showFreeConsult"> -->
                 <FreeConsult />
-            </q-dialog>
+            <!-- </q-dialog> -->
             <br>
             <a href='https://ko-fi.com/E1E01LQUA' target='_blank'><img height='36' 
             style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi5.png?v=2' 
@@ -28,7 +28,7 @@ export default {
     name: 'PageAbout',
     components:{
     'FreeConsult' : require('components/FreeConsult').default,
-    'FreeButton' : require('components/FreeButton').default,
+    // 'FreeButton' : require('components/FreeButton').default,
     },
     data() {
         return {
